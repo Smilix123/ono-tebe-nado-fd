@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid green;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -189,7 +193,6 @@
 }
 
 .card__title {
-  z-index: 1;
   padding: 48px 40px 0 40px;
   color: #fff;
   font-weight: 700;
@@ -201,7 +204,6 @@
 }
 
 .card__text {
-  z-index: 1;
   padding: 0 40px 48px 40px;
   color: #fff;
   font-weight: 400;
@@ -218,16 +220,16 @@
 }
 
 .about {
-  position: relative;
-  height: 595px;
-  margin: 150px 24px 0 24px;
+  display: flex;
+  margin: 150px 24px 180px 24px;
+  gap: 73px;
 }
 
 .about__logo {
   position: relative;
   width: 240px;
   height: 240px;
-  margin: 35px 0 0 47px;
+  margin: 2px 0 0 47px;
   border-radius: 50%;
   background-color: #000;
 }
@@ -241,11 +243,12 @@
 }
 
 .about__column {
-  position: absolute;
+  /* position: absolute; */
   top: 102px;
   right: 0px;
   width: 693px;
   text-wrap: balance;
+  margin: 104px 0 0 0;
 }
 
 .about__title {
