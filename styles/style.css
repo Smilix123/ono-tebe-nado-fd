@@ -1,12 +1,8 @@
 .header {
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  grid-template-areas: "header__menu header__logo header__address";
-  justify-items: start;
-  align-items: center;
-  align-content: center;
-  height: 293px;
-  padding: 89px 49px 96px 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 85px 49px 92px 50px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -26,11 +22,14 @@
 }
 
 .header__menu {
-  grid-area: header__menu;
+  align-self: center;
 }
 
 .header__logo {
-  grid-area: header__logo;
+  position: relative;
+  right: 72px;
+  width: 136px;
+  margin-top: 8px;
 }
 
 .header__links-list-item > a {
@@ -41,14 +40,7 @@
   list-style-type: none;
 }
 
-.header__logo > a > img {
-  width: 136px;
-  margin-top: 8px;
-}
-
 .header__address {
-  grid-area: header__address;
-  place-self: end;
   align-self: center;
 }
 
@@ -64,6 +56,7 @@
 }
 
 .cover {
+  position: relative;
   width: 1100px;
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
@@ -71,13 +64,17 @@
   background-size: cover;
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0, 0.6);
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
+  position: relative;
+
   padding: 166px 50px 50px 50px;
   padding-bottom: 105px;
   color: #fff;
@@ -108,6 +105,7 @@
 }
 
 .cover__description {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,20 +149,27 @@
 }
 
 .lots__card-list {
-  position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 25px;
   list-style-type: none;
 }
 
-.card {
+.lots__card-list-item {
   position: relative;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 334px;
-  height: 596px;
+  min-height: 596px;
+}
+
+.cards-link {
+  text-decoration: none;
 }
 
 .card_type_film {
@@ -189,6 +194,8 @@
 }
 
 .card__title {
+  position: relative;
+  z-index: 1;
   padding: 48px 40px 0 40px;
   color: #fff;
   font-weight: 700;
@@ -200,6 +207,8 @@
 }
 
 .card__text {
+  position: relative;
+  z-index: 1;
   padding: 0 40px 48px 40px;
   color: #fff;
   font-weight: 400;
@@ -217,8 +226,8 @@
 
 .about {
   display: flex;
-  margin: 150px 24px 180px 24px;
   gap: 73px;
+  margin: 150px 24px 180px 24px;
 }
 
 .about__logo {
@@ -239,12 +248,9 @@
 }
 
 .about__column {
-  /* position: absolute; */
-  top: 102px;
-  right: 0px;
   width: 693px;
-  text-wrap: balance;
   margin: 104px 0 0 0;
+  text-wrap: balance;
 }
 
 .about__title {
@@ -304,13 +310,4 @@
 
 .footer__links-list-item > a {
   text-underline-offset: 4px;
-}
-
-.overlay-lots {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
 }
