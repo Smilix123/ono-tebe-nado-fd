@@ -1,10 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
   padding: 85px 49px 92px 50px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
   font-size: 18px;
 }
 
@@ -26,10 +23,8 @@
 }
 
 .header__logo {
-  position: relative;
-  right: 72px;
   width: 136px;
-  margin-top: 8px;
+  margin: 8px 145px 0 0;
 }
 
 .header__links-list-item > a {
@@ -42,22 +37,21 @@
 
 .header__address {
   align-self: center;
+  width: 240px;
 }
 
 .address {
-  width: 240px;
   font-style: normal;
   line-height: 135%;
 }
 
 .address > a {
-  border-bottom: 2px solid black;
-  text-decoration: none;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
 }
 
 .cover {
   position: relative;
-  width: 1100px;
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -74,11 +68,9 @@
 
 .cover__title {
   position: relative;
-
-  padding: 166px 50px 50px 50px;
+  padding: 146px 50px 50px 50px;
   padding-bottom: 105px;
   color: #fff;
-  font-weight: bold;
   font-size: 100px;
   line-height: 115%;
   letter-spacing: 0.3em;
@@ -91,16 +83,15 @@
 
 .aligned-text {
   display: block;
+  padding-top: 20px;
 }
 
 .aligned-text_center {
-  padding-top: 20px;
-  padding-left: 30px;
+  margin-left: 30px;
   text-align: center;
 }
 
 .aligned-text_right {
-  padding-top: 20px;
   text-align: right;
 }
 
@@ -110,26 +101,21 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 50px 50px 50px;
-  font-family: "Raleway";
-  font-weight: 400;
   font-size: 22px;
-  line-height: 127%;
   text-transform: uppercase;
 }
 
 .description {
   color: #fff;
-  font-style: normal;
   word-spacing: 19px;
 }
 
 .button {
   width: 256px;
-  height: 51px;
+  min-height: 50px;
   border: 1px solid #fff;
+  padding: 10px 0 10px 0;
   color: #fff;
-  font-weight: 500;
-  text-align: center;
   text-transform: uppercase;
   background: none;
   cursor: pointer;
@@ -142,8 +128,6 @@
 .lots__heading {
   margin-bottom: 27px;
   margin-left: 40px;
-  color: #000;
-  font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -166,6 +150,9 @@
   justify-content: space-between;
   width: 334px;
   min-height: 596px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .cards-link {
@@ -174,23 +161,14 @@
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card__title {
@@ -198,7 +176,6 @@
   z-index: 1;
   padding: 48px 40px 0 40px;
   color: #fff;
-  font-weight: 700;
   font-size: 22px;
   line-height: 120%;
   text-decoration: underline;
@@ -207,13 +184,10 @@
 }
 
 .card__text {
-  position: relative;
   z-index: 1;
   padding: 0 40px 48px 40px;
   color: #fff;
-  font-weight: 400;
   font-size: 20px;
-  line-height: 120%;
 }
 
 .lots__look-more-link {
@@ -231,7 +205,6 @@
 }
 
 .about__logo {
-  position: relative;
   width: 240px;
   height: 240px;
   margin: 2px 0 0 47px;
@@ -240,11 +213,9 @@
 }
 
 .about__logo-image {
-  position: absolute;
-  top: 27%;
-  left: 19%;
   width: 149px;
   height: 114px;
+  margin: 65px 0 0 46px;
 }
 
 .about__column {
@@ -255,43 +226,34 @@
 
 .about__title {
   margin-bottom: 100px;
-  font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
 }
 
 .about__text {
   margin-top: 24px;
-  font-weight: 400;
   font-size: 20px;
-  line-height: 120%;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  height: 180px;
+  min-height: 180px;
   margin-top: 147px;
   padding: 0 50px 0;
+  font-size: 18px;
 }
 
-.footer > .address {
-  display: block;
+.footer__address {
   width: 250px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 135%;
 }
 
 .footer__menu {
-  position: relative;
-  top: 1px;
-  right: 5px;
+  margin: 0 9px 0 0;
 }
 
 .footer__links-list {
-  font-weight: 400;
-  font-size: 18px;
+  line-height: 120%;
   text-align: center;
   list-style-type: none;
 }
